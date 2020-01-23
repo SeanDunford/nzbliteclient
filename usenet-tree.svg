@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 2129.1 1080" inkscape:version="0.92.3 (2405546, 2018-03-11)" sodipodi:docname="Usenet Providers and Backbones.svg" version="1.1" viewBox="0 0 2129.1 1080" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"><sodipodi:namedview bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" inkscape:current-layer="Ebene_1" inkscape:cx="1064.55" inkscape:cy="540" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="1017" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="0.69888682" objecttolerance="10" pagecolor="#ffffff" showgrid="false"/><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><defs><clipPath id="clipPath4803"><rect x="691.67" y="391.22" width="93.438" height="6.8849" fill="#ffffff" fill-rule="evenodd"/></clipPath></defs>
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:9;}
+	.st1{fill:none;stroke:#C42021;stroke-width:4;}
+	.st2{fill:#CECECE;}
+	.st3{fill:#C42021;}
+	.st4{fill:#FFFFFF;}
+	.st5{font-family:'Helvetica';}
+	.st6{font-size:10px;}
+	.st7{font-family:'Helvetica-Light';}
+	.st8{font-size:9px;}
+	.st9{enable-background:new    ;}
+	.st10{fill:none;}
+	.st11{font-size:8px;}
+	.st12{fill:none;stroke:#C42021;stroke-width:4;stroke-dasharray:12.6043,12.6043;}
+	.st13{fill:none;stroke:#CA054D;stroke-width:4;}
+	.st14{fill:none;stroke:#CA054D;stroke-width:4;stroke-dasharray:11.711,11.711;}
+	.st15{fill:none;stroke:#CA054D;stroke-width:4;stroke-dasharray:13.9164,13.9164;}
+	.st16{fill:#CA054D;}
+	.st17{fill:none;stroke:#CA054D;stroke-width:4;stroke-dasharray:12;}
+	.st18{fill:none;stroke:#CA054D;stroke-width:4;stroke-dasharray:9.9841,9.9841;}
+	.st19{fill:none;stroke:#CA054D;stroke-width:4;stroke-dasharray:11.5729,11.5729;}
+	.st20{fill:none;stroke:#FCB742;stroke-width:4;}
+	.st21{fill:#FCB742;}
+	.st22{fill:none;stroke:#FA4A48;stroke-width:4;}
+	.st23{fill:#FA4A48;}
+	.st24{fill:none;stroke:#735F4B;stroke-width:4;}
+	.st25{fill:#735F4B;}
+	.st26{fill:none;stroke:#99B400;stroke-width:4;}
+	.st27{fill:#99B400;}
+	.st28{fill:none;stroke:#009985;stroke-width:4;}
+	.st29{fill:#009985;}
+	.st30{fill:none;stroke:#235789;stroke-width:4;}
+	.st31{fill:#235789;}
+	.st32{fill:none;stroke:#F77F00;stroke-width:4;}
+	.st33{fill:#F77F00;}
+	.st34{fill:none;stroke:#149100;stroke-width:4;}
+	.st35{fill:#149100;}
+	.st36{fill:none;stroke:#01839B;stroke-width:4;}
+	.st37{fill:#01839B;}
+	.st38{font-size:52.79px;}
+	.st39{fill:#AB9681;}
+	.st40{fill:none;stroke:#C42021;stroke-width:4;stroke-dasharray:12;}
+</style>
+<g id="Ebene_2_1_">
+	<g id="Omicron">
+		<line class="st0" x1="635" x2="635" y1="418.5" y2="370"/>
+		<polyline class="st1" points="205 418.5 205 370 592 370 592 418.5"/>
+		<line class="st1" x1="423.2" x2="423.2" y1="318.5" y2="370"/>
+		<polyline class="st1" points="677.9 608.3 677.9 630.7 763.8 630.7 763.8 608.3"/>
+		<line class="st1" x1="720.9" x2="720.9" y1="630.7" y2="680.4"/>
+		<line class="st1" x1="334" x2="334" y1="608.1" y2="680.2"/>
+		<line class="st1" x1="575.4" x2="804.5" y1="680.4" y2="680.4"/>
+		<line class="st1" x1="295.7" x2="377" y1="680.2" y2="680.2"/>
+		<line class="st1" x1="763.8" x2="763.8" y1="463.5" y2="563.5"/>
+		<polyline class="st1" points="506.2 563.5 506.2 517.5 677.9 517.5 677.9 563.5"/>
+		<line class="st1" x1="592.1" x2="592.1" y1="563.5" y2="463.5"/>
+		<polyline class="st1" points="76.2 563.3 76.2 517.3 336.4 517.3 336.4 563.3"/>
+		<line class="st1" x1="162.1" x2="162.1" y1="563.3" y2="517.3"/>
+		<line class="st1" x1="248" x2="248" y1="563.3" y2="517.3"/>
+		<line class="st1" x1="205" x2="205" y1="463.3" y2="517.3"/>
+		<g id="Provider-XLned">
+			<path class="st2" d="M295.7,563.3H372v15.2h-76.3V563.3z"/>
+			<path class="st3" d="M295.7,578.4H372V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(319.49 597.54)">XLned</text>
+			<text class="st7 st8" transform="translate(317.2 574.08)">Provider</text>
+		</g>
+		<g id="Provider-Easynews">
+			<path class="st2" d="M468,563.5h76.3v15.2H468V563.5z"/>
+			<path class="st2" d="M468,578.6h76.3v29.6H468V578.6z"/>
+			<path class="st3" d="M468,578.6h76.3v29.6H468V578.6z"/>
+			<text class="st7 st8" transform="translate(489.45 574.28)">Provider</text>
+			<text class="st4 st5 st6" transform="translate(482.58 597.74)">EasyNews</text>
+		</g>
+		<g id="Provider-Easynews_1_">
+			<path class="st2" d="M382,563.5h76.3v15.2H382V563.5z"/>
+			<path class="st2" d="M382,578.6h76.3v29.6H382V578.6z"/>
+			<path class="st3" d="M382,578.6h76.3v29.6H382V578.6z"/>
+			<text class="st7 st8" transform="translate(403.47 574.28)">Provider</text>
+			<text class="st9" transform="translate(394.91 591.95)"><tspan class="st4 st5 st6" x="0" y="0">Newsgroup</tspan><tspan class="st4 st5 st6" x="13.9" y="12">Ninja</tspan></text>
+		</g>
+		<g id="Provider-UsenetServer">
+			<path class="st2" d="m553.9 563.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st3" d="m553.9 578.6h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(561.52 597.74)">UsenetServer</text>
+			<text class="st7 st8" transform="translate(575.34 574.28)">Provider</text>
+		</g>
+		<g id="Reseller-Newshosting_x2B_Eweka">
+			<path class="st2" d="m575.4 680.7h229v15.2h-229v-15.2z"/>
+			<text class="st7 st8" transform="translate(673.64 691.48)">Reseller</text>
+			<path class="st10" d="M692.9,700.3h111.5v257.2H692.9V700.3z"/>
+			<text class="st5 st6" transform="translate(575.43 923.44)">NewsGroupDownload</text>
+			<text class="st5 st6" transform="translate(692.91 707.44)">Newsleecher</text>
+			<text class="st5 st6" transform="translate(692.91 719.44)">Ngroups</text>
+			<text class="st5 st6" transform="translate(692.91 731.44)">nntpjunkie.com</text>
+			<text class="st5 st6" transform="translate(692.91 743.44)">Prepaid-Usenet</text>
+			<text class="st5 st6" transform="translate(692.91 755.44)">Shemes</text>
+			<text class="st5 st6" transform="translate(692.91 767.44)">SimonNews</text>
+			<text class="st5 st6" transform="translate(692.91 779.44)">SnelNL</text>
+			<text class="st5 st6" transform="translate(692.91 791.44)">TheCubeNet</text>
+			<text class="st5 st6" transform="translate(692.91 803.44)">ThunderNews</text>
+			<text class="st5 st6" transform="translate(692.91 815.44)">Uncensored Newsfeed</text>
+			<text class="st5 st6" transform="translate(692.91 827.44)">Usenet-News</text>
+			<text class="st5 st6" transform="translate(692.91 839.44)">Usenet.nl</text>
+			<text class="st5 st6" transform="translate(692.91 851.44)">Usenet.se</text>
+			<text class="st5 st6" transform="translate(692.91 863.44)">Usenet4u</text>
+			<text class="st5 st6" transform="translate(692.91 875.44)">UsenetAcess</text>
+			<text class="st5 st6" transform="translate(692.91 887.44)">UsenetCentral</text>
+			<text class="st5 st6" transform="translate(692.91 899.44)">UseNetNow</text>
+			<text class="st5 st6" transform="translate(692.91 911.44)">UsenetStorm</text>
+			<text class="st5 st6" transform="translate(692.91 923.44)">Usenext</text>
+			<text class="st5 st6" transform="translate(692.91 935.44)">XenNews</text>
+			<path class="st10" d="M575.3,700.3h111.5v257.2H575.3V700.3z"/>
+			<text class="st5 st6" transform="translate(575.34 707.44)">AnarQy</text>
+			<text class="st5 st6" transform="translate(575.34 719.44)">Alibis</text>
+			<text class="st5 st6" transform="translate(575.34 731.44)">AnonyNews</text>
+			<text class="st5 st6" transform="translate(575.34 743.44)">Astraweb</text>
+			<text class="st5 st6" transform="translate(575.34 755.44)">Binary Boy</text>
+			<text class="st5 st6" transform="translate(575.34 767.44)">BinTube</text>
+			<text class="st5 st6" transform="translate(575.34 779.44)">BlockNews</text>
+			<text class="st5 st6" transform="translate(575.34 791.44)">BudgetNews</text>
+			<text class="st5 st6" transform="translate(575.34 803.44)">Fast-Usenet</text>
+			<text class="st5 st6" transform="translate(575.34 815.44)">Firstload</text>
+			<text class="st5 st6" transform="translate(575.34 827.44)">Forte Agent</text>
+			<text class="st5 st6" transform="translate(575.34 839.44)">Frugal Usenet</text>
+			<text class="st5 st6" transform="translate(575.34 851.44)">Hitnews</text>
+			<text class="st5 st6" transform="translate(575.34 863.44)">iLoad</text>
+			<text class="st5 st6" transform="translate(575.34 875.44)">Maximum Usenet</text>
+			<text class="st5 st6" transform="translate(575.34 887.44)">Newsdemon</text>
+			<text class="st5 st6" transform="translate(575.34 899.44)">Newsguy</text>
+			<text class="st5 st6" transform="translate(575.34 911.44)">Newsfusion</text>
+			<text class="st5 st6" transform="translate(575.34 935.44)">Newsgroup-Binaries</text>
+			<text class="st5 st6" transform="translate(575.34 947.44)">NewsGroupDirect</text>
+		</g>
+		<g id="Provider-NewsHosting">
+			<path class="st2" d="m639.8 563.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st3" d="m639.8 578.6h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(648.51 597.74)">NewsHosting</text>
+			<text class="st7 st8" transform="translate(661.22 574.28)">Provider</text>
+		</g>
+		<g id="Provider-Eweka">
+			<path class="st2" d="m725.6 563.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st3" d="m725.6 578.6h76.3v29.6h-76.3v-29.6z"/>
+			<path d="m740.6 608.3h-15v-15"/>
+			<text class="st4 st5 st6" transform="translate(748.84 597.74)">Eweka</text>
+			<text class="st7 st8" transform="translate(747.1 574.28)">Provider</text>
+		</g>
+		<g id="Backbone-Hignwinds">
+			<path class="st2" d="M468,418.7h248.1v15.2H468V418.7z"/>
+			<path class="st3" d="M468,433.9h248.1v29.6H468V433.9z"/>
+			<text class="st7 st8" transform="translate(571.57 429.49)">Backbone</text>
+			<text class="st4 st5 st6" transform="translate(569.02 446.95)">Highwinds</text>
+			<text class="st4 st5 st11" transform="translate(583.82 456.55)">(US)</text>
+		</g>
+		<g id="Company_-_Omicron">
+			<path class="st2" d="M38,273.7h764v15.2H38V273.7z"/>
+			<path class="st3" d="M38,288.9h764v29.6H38V288.9z"/>
+			<text class="st7 st8" transform="translate(403.16 284.5)">Company</text>
+			<text class="st4 st5 st6" transform="translate(403.77 306.85)">Omicron</text>
+		</g>
+		<g id="Backbone-Eweka">
+			<path class="st2" d="m725.6 418.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st3" d="m725.6 433.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(748.84 446.95)">Eweka</text>
+			<text class="st4 st5 st11" transform="translate(745.64 456.55)">(NL &amp; DE)</text>
+			<text class="st7 st8" transform="translate(743.34 429.49)">Backbone</text>
+		</g>
+		<g id="Backbone-Base_IP">
+			<path class="st2" d="m38 418.5h334v15.2h-334v-15.2z"/>
+			<path class="st3" d="m38 433.7h334v29.6h-334v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(187.62 446.75)">Base IP</text>
+			<text class="st4 st5 st11" transform="translate(197.32 456.35)">(NL)</text>
+			<text class="st7 st8" transform="translate(184.61 429.29)">Backbone</text>
+		</g>
+		<g id="Provider-PureUsenet">
+			<path class="st2" d="m123.9 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st3" d="M123.9,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(135.78 597.54)">PureUsenet</text>
+			<text class="st7 st8" transform="translate(145.43 574.08)">Provider</text>
+		</g>
+		<g id="Provider-SunnyUsenet">
+			<path class="st2" d="m209.8 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st3" d="m209.8 578.4h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(218.05 597.54)">SunnyUsenet</text>
+			<text class="st7 st8" transform="translate(231.32 574.08)">Provider</text>
+		</g>
+		<g id="Reseller-XLned">
+			<path class="st2" d="M295.7,680.5H377v15.2h-81.3V680.5z"/>
+			<text class="st7 st8" transform="translate(320.18 691.28)">Reseller</text>
+			<path class="st10" d="M295.7,700.1h162.6v257.2H295.7V700.1z"/>
+			<text class="st5 st6" transform="translate(295.78 707.24)">123Usenet</text>
+			<text class="st5 st6" transform="translate(295.78 719.24)">ExtremeUsenet</text>
+			<text class="st5 st6" transform="translate(295.78 731.24)">MijnUsenet</text>
+			<text class="st5 st6" transform="translate(295.78 743.24)">Usenet.pro</text>
+			<text class="st5 st6" transform="translate(295.78 755.24)">UsenetBucket</text>
+			<text class="st5 st6" transform="translate(295.78 767.24)">Vordeligusnet</text>
+		</g>
+		<g id="Provider-TweakNews">
+			<path class="st2" d="M38,563.3h76.3v15.2H38V563.3z"/>
+			<path class="st3" d="M38,578.4h76.3V608H38V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(49.072 597.54)">TweakNews</text>
+			<text class="st7 st8" transform="translate(59.552 574.08)">Provider</text>
+			<path d="M53,608.1H38v-15"/>
+		</g>
+				<line class="st1" x1="674.6" x2="674.6" y1="418.5" y2="412.4"/>
+				<polyline class="st1" points="674.6 400.3 674.6 394.2 680.7 394.2"/>
+				<polyline class="st12" points="693.4 394.2 834 394.2 989.6 394.2"/>
+				<polyline class="st1" points="995.9 394.2 1002 394.2 1002 400.3"/>
+				<line class="st1" x1="1002" x2="1002" y1="412.4" y2="418.5"/>
+				<line class="st1" x1="850" x2="850" y1="418.7" y2="412.6"/>
+				<line class="st1" x1="850" x2="850" y1="400.3" y2="394.2"/>
+		<polyline class="st1" points="763.8 418.5 763.8 370 592 370"/>
+		<polyline class="st1" points="420.2 563.3 420.2 517.5 506.2 517.5"/>
+	</g>
+	<g id="Abavia">
+		<path class="st13" d="m1365 318.5v100m-85.9 144.8v-46h171.8v46m-85.9 0v-100m85.9 144.8v36h-152.3v36.1m-57.6 0h115.2"/>
+				<line class="st13" x1="1365.1" x2="1371.1" y1="481.7" y2="481.7"/>
+				<line class="st13" x1="1857.2" x2="1857.2" y1="557.3" y2="563.3" fill="#000000" stroke="#000000"/>
+		<g id="Backbone-Abavia">
+			<path class="st2" d="M1241,418.5h248.1v15.2H1241V418.5z"/>
+			<path class="st16" d="M1241,433.7h248.1v29.6H1241V433.7z"/>
+			<text class="st4 st5 st6" transform="translate(1349.8 446.75)">Abavia</text>
+			<text class="st4 st5 st11" transform="translate(1357.3 456.35)">(NL)</text>
+			<text class="st7 st8" transform="translate(1344.6 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Abavia">
+			<path class="st2" d="M1241,273.7h248.1v15.2H1241V273.7z"/>
+			<path class="st16" d="M1241,288.9h248.1v29.6H1241V288.9z"/>
+			<text class="st4 st5 st6" transform="translate(1349.8 306.85)">Abavia</text>
+			<text class="st7 st8" transform="translate(1345.6 284.5)">Company</text>
+		</g>
+		<g id="Provider-EasyNews">
+			<path class="st2" d="M1241,563.3h76.3v15.2H1241V563.3z"/>
+			<path class="st16" d="M1241,578.4h76.3V608H1241V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1253.1 597.54)">EasyUsenet</text>
+			<text class="st7 st8" transform="translate(1262.4 574.08)">Provider</text>
+		</g>
+		<g id="Provider-Xennanews">
+			<path class="st2" d="m1326.9 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st16" d="M1326.9,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1338.9 597.54)">Xennanews</text>
+			<text class="st7 st8" transform="translate(1348.3 574.08)">Provider</text>
+		</g>
+		<g id="Provider-XS_News">
+			<path class="st2" d="m1412.7 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st16" d="M1412.7,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1430.4 597.54)">XS News</text>
+			<text class="st7 st8" transform="translate(1434.2 574.08)">Provider</text>
+		</g>
+		<g id="Reseller-XS_News">
+			<path class="st2" d="M1241,680.5h115.3v15.2H1241V680.5z"/>
+			<text class="st7 st8" transform="translate(1282.4 691.28)">Reseller</text>
+			<path class="st10" d="M1241,700.1h162.6v257.2H1241V700.1z"/>
+			<text class="st5 st6" transform="translate(1241 707.24)">aEton</text>
+			<text class="st5 st6" transform="translate(1241 719.24)">Bulknews</text>
+			<text class="st5 st6" transform="translate(1241 731.24)">Dreamload</text>
+			<text class="st5 st6" transform="translate(1241 743.24)">Gebruikhet</text>
+			<text class="st5 st6" transform="translate(1241 755.24)">I-Telligent</text>
+			<text class="st5 st6" transform="translate(1241 767.24)">Newsgrabber</text>
+			<text class="st5 st6" transform="translate(1241 779.24)">NewsXS</text>
+			<text class="st5 st6" transform="translate(1241 791.24)">SMS Usenet</text>
+			<text class="st5 st6" transform="translate(1241 803.24)">Speedplaza</text>
+			<text class="st5 st6" transform="translate(1241 815.24)">Usenet.nl</text>
+			<text class="st5 st6" transform="translate(1241 827.24)">UsenetDiscount</text>
+			<text class="st5 st6" transform="translate(1241 839.24)">UsenetDiscounter.com</text>
+			<text class="st5 st6" transform="translate(1241 851.24)">Uset.Today</text>
+			<text class="st5 st6" transform="translate(1241 863.24)">Usenet-Server</text>
+			<text class="st5 st6" transform="translate(1241 875.24)">Usenext</text>
+			<text class="st5 st6" transform="translate(1241 887.24)">XS Usenet</text>
+			<text class="st5 st6" transform="translate(1241 899.24)">Z51</text>
+		</g>
+		<line class="st17" x1="1764.6" x2="1764.6" y1="563.3" y2="481.7"/>
+			<g stroke="#000000">
+				<line class="st13" x1="1949.9" x2="1949.9" y1="563.3" y2="557.4" fill="#000000"/>
+				<line class="st18" x1="1949.9" x2="1949.9" y1="547.5" y2="492.5"/>
+			</g>
+	</g>
+		<path class="st20" d="m892.7 318.5v100m0 44.8v54m-43 46v-46h85.9v46"/>
+			<path class="st2" d="M811.6,418.5h162.2v15.2H811.6V418.5z"/>
+			<path class="st21" d="M811.6,433.7h162.2v29.6H811.6V433.7z"/>
+			<text class="st4 st5 st6" transform="translate(860.47 446.75)">Usenet-Node1</text>
+			<text class="st4 st5 st11" transform="translate(884.67 456.35)">(FR)</text>
+			<text class="st7 st8" transform="translate(872.2 429.29)">Backbone</text>
+			<path class="st2" d="M811.6,273.7h162.2v15.2H811.6V273.7z"/>
+			<path class="st21" d="M811.6,288.9h162.2v29.6H811.6V288.9z"/>
+			<text class="st4 st5 st6" transform="translate(860.47 306.85)">Usenet-Node1</text>
+			<text class="st7 st8" transform="translate(873.2 284.5)">Company</text>
+		<g id="Provider-AnarQi">
+			<path class="st2" d="m811.6 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st21" d="M811.6,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(834.2 597.54)">AnarQy</text>
+			<text class="st7 st8" transform="translate(833.02 574.08)">Provider</text>
+		</g>
+		<g id="Provider-SonicNews">
+			<path class="st2" d="m897.4 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st21" d="M897.4,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(908.97 597.54)">Sonic-News</text>
+			<text class="st7 st8" transform="translate(918.9 574.08)">Provider</text>
+		</g>
+	<g id="Elbracht">
+		<path class="st22" d="m1150.3 318.5v100m0 44.8v54m-42.9 46v-46h85.9v46"/>
+		<g id="Backbone-Elbracht">
+			<path class="st2" d="m1069.2 418.5h162.2v15.2h-162.2v-15.2z"/>
+			<path class="st23" d="m1069.2 433.7h162.2v29.6h-162.2v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1132 446.75)">Elbracht</text>
+			<text class="st4 st5 st11" transform="translate(1142.1 456.35)">(DE)</text>
+			<text class="st7 st8" transform="translate(1129.8 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Elbracht">
+			<path class="st2" d="m1069.2 273.7h162.2v15.2h-162.2v-15.2z"/>
+			<path class="st23" d="m1069.2 288.9h162.2v29.6h-162.2v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1132 306.85)">Elbracht</text>
+			<text class="st7 st8" transform="translate(1130.9 284.5)">Company</text>
+		</g>
+		<g id="Provider-United_Newsserver">
+			<path class="st2" d="m1069.2 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st23" d="M1069.2,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1093 591.95)">United</text>
+			<text class="st4 st5 st6" transform="translate(1081.1 603.95)">Newsserver</text>
+			<text class="st7 st8" transform="translate(1090.7 574.08)">Provider</text>
+		</g>
+		<g id="Provider-Premium_News">
+			<path class="st2" d="m1155.1 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st23" d="M1155.1,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1159.4 597.54)">Premium News</text>
+			<text class="st7 st8" transform="translate(1176.5 574.08)">Provider</text>
+		</g>
+	</g>
+	<g id="UsnetExpress">
+		<path class="st24" d="m1966.7 318.5v100m0 44.8v100"/>
+		<g id="Backbone-UExpress">
+			<path class="st2" d="m1928.5 418.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st25" d="m1928.5 433.7h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1945 446.75)">UExpress</text>
+			<text class="st4 st5 st11" transform="translate(1958.5 456.35)">(US)</text>
+			<text class="st7 st8" transform="translate(1946.2 429.29)">Backbone</text>
+		</g>
+		<g id="Company-UsenetExpress">
+			<path class="st2" d="m1928.5 273.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st25" d="m1928.5 288.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1932.8 306.85)">UsenetExpress</text>
+			<text class="st7 st8" transform="translate(1947.2 284.5)">Company</text>
+		</g>
+		<g id="Provider-UExpress">
+			<path class="st2" d="m1928.5 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st25" d="M1928.5,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1945 597.54)">UExpress</text>
+			<text class="st7 st8" transform="translate(1950 574.08)">Provider</text>
+		</g>
+	</g>
+	<g id="Vper_News">
+		<path class="st26" d="m2053 318.5v100m0 44.8v100"/>
+		<g id="Backbone-ViperNews">
+			<path class="st2" d="m2014.8 418.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st27" d="m2014.8 433.7h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(2028.3 446.75)">Viper News</text>
+			<text class="st4 st5 st11" transform="translate(2044.8 456.35)">(NL)</text>
+			<text class="st7 st8" transform="translate(2032.5 429.29)">Backbone</text>
+		</g>
+		<g id="Company-ViperNews">
+			<path class="st2" d="m2014.8 273.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st27" d="m2014.8 288.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(2028.1 306.85)">Viper News</text>
+			<text class="st7 st8" transform="translate(2033.5 284.5)">Company</text>
+		</g>
+		<g id="Provider-ViperNews">
+			<path class="st2" d="m2014.8 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st27" d="M2014.8,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(2028.3 597.54)">Viper News</text>
+			<text class="st7 st8" transform="translate(2036.3 574.08)">Provider</text>
+		</g>
+		<path d="m2029.8 608h-15v-15"/>
+	</g>
+	<g id="Novia">
+		<path class="st28" d="m1021.5 318.5v100m0 44.8v100m0 44.8v72.1m-38.2 0h76.4"/>
+		<g id="Backbone-Novia">
+			<path class="st2" d="m983.3 418.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st29" d="m983.3 433.7h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1008.7 446.75)">Novia</text>
+			<text class="st4 st5 st11" transform="translate(1013.3 456.35)">(US)</text>
+			<text class="st7 st8" transform="translate(1001 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Novia">
+			<path class="st2" d="m983.3 273.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st29" d="m983.3 288.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1008.7 306.85)">Novia</text>
+			<text class="st7 st8" transform="translate(1002 284.5)">Company</text>
+		</g>
+		<g id="Provider-Newsscene">
+			<path class="st2" d="m983.3 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st29" d="M983.3,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(995.69 597.54)">Newsscene</text>
+			<text class="st7 st8" transform="translate(1004.8 574.08)">Provider</text>
+		</g>
+		<g id="Reseller-Newsscene">
+			<path class="st2" d="m983.3 680.5h76.3v15.2h-76.3v-15.2z"/>
+			<text class="st7 st8" transform="translate(1005.3 691.28)">Reseller</text>
+			<path class="st10" d="M983.3,700.1h162.6v257.2H983.3V700.1z"/>
+			<text class="st5 st6" transform="translate(983.36 707.24)">Premium News</text>
+		</g>
+	</g>
+	<g id="Giganews">
+		<path class="st30" d="m1584.5 318.5v100m0 44.8v54m-42.9 46v-46h85.9v46m-90.7 44.8v72.1m-38.2 0h90.9"/>
+		<g id="Backbone-Giganews">
+			<path class="st2" d="m1498.6 418.5h162.2v15.2h-162.2v-15.2z"/>
+			<path class="st31" d="m1498.6 433.7h162.2v29.6h-162.2v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1557.5 446.75)">Giganews</text>
+			<text class="st4 st5 st11" transform="translate(1561.5 456.35)">(US &amp; NL)</text>
+			<text class="st7 st8" transform="translate(1559.3 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Giganews">
+			<path class="st2" d="m1498.6 273.7h162.2v15.2h-162.2v-15.2z"/>
+			<path class="st31" d="m1498.6 288.9h162.2v29.6h-162.2v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1557.5 306.85)">Giganews</text>
+			<text class="st7 st8" transform="translate(1560.3 284.5)">Company</text>
+		</g>
+		<g id="Provider-Giganews">
+			<path class="st2" d="m1498.6 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st31" d="M1498.6,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1514.6 597.54)">Giganews</text>
+			<text class="st7 st8" transform="translate(1520.1 574.08)">Provider</text>
+		</g>
+		<g id="Provider-Supernews">
+			<path class="st2" d="m1584.5 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st31" d="M1584.5,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1597.7 597.54)">Supernews</text>
+			<text class="st7 st8" transform="translate(1606 574.08)">Provider</text>
+		</g>
+		<g id="Reseller-Giganews">
+			<path class="st2" d="m1498.6 680.5h90.9v15.2h-90.9v-15.2z"/>
+			<text class="st7 st8" transform="translate(1527.8 691.28)">Reseller</text>
+			<path class="st10" d="M1499.7,700.1h162.6v257.2h-162.6V700.1z"/>
+			<text class="st5 st6" transform="translate(1499.8 707.24)">PowerUsenet</text>
+			<text class="st5 st6" transform="translate(1499.8 719.24)">RhinoNewsgroups</text>
+			<text class="st5 st6" transform="translate(1499.8 731.24)">Usenet.net</text>
+		</g>
+	</g>
+	<g id="Altopia">
+		<path class="st32" d="m1708.6 318.5v100m0 44.8v100"/>
+		<g id="Backbone-Altopia">
+			<path class="st2" d="m1670.4 418.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st33" d="m1670.4 433.7h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1693.3 446.75)">Altopia</text>
+			<text class="st4 st5 st11" transform="translate(1700.4 456.35)">(US)</text>
+			<text class="st7 st8" transform="translate(1688.1 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Altopia">
+			<path class="st2" d="m1670.4 273.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st33" d="m1670.4 288.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1693.3 306.85)">Altopia</text>
+			<text class="st7 st8" transform="translate(1689.1 284.5)">Company</text>
+		</g>
+		<g id="Provider-Altopia">
+			<path class="st2" d="m1670.4 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st33" d="M1670.4,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1693.3 597.54)">Altopia</text>
+			<text class="st7 st8" transform="translate(1691.8 574.08)">Provider</text>
+		</g>
+	</g><polyline class="st12" transform="translate(984.97 87.5)" points="693.4 394.2 834 394.2 989.6 394.2" clip-path="url(#clipPath4803)" fill="none" stroke="#ca054d" stroke-dasharray="12.6043, 12.6043" stroke-width="4"/>
+	<g id="Cheapnews">
+		<path class="st34" d="m1794.4 318.5v100m0 44.8v100"/>
+		<g id="Backbone-Cheapnews">
+			<path class="st2" d="m1756.3 418.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st35" d="m1756.3 433.7h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1768.1 446.75)">Cheapnews</text>
+			<text class="st4 st5 st11" transform="translate(1786.7 456.35)">(NL)</text>
+			<text class="st7 st8" transform="translate(1774 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Cheapnews">
+			<path class="st2" d="m1756.3 273.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st35" d="m1756.3 288.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1768.1 306.85)">Cheapnews</text>
+			<text class="st7 st8" transform="translate(1775 284.5)">Company</text>
+		</g>
+		<g id="Provider-Cheapnews">
+			<path class="st2" d="m1756.3 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st35" d="M1756.3,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1768.1 597.54)">Cheapnews</text>
+			<text class="st7 st8" transform="translate(1777.7 574.08)">Provider</text>
+		</g>
+	</g>
+	<g id="Usenet.Farm">
+		<path class="st36" d="m1880.3 318.5v100m0 44.8v100"/>
+		<g id="Backbone-Its_Hosted">
+			<path class="st2" d="m1842.2 418.5h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st37" d="m1842.2 433.7h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1857.9 446.75)">Its Hosted</text>
+			<text class="st4 st5 st11" transform="translate(1872.6 456.35)">(NL)</text>
+			<text class="st7 st8" transform="translate(1859.9 429.29)">Backbone</text>
+		</g>
+		<g id="Company-Usenet.Farm">
+			<path class="st2" d="m1842.2 273.7h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st37" d="m1842.2 288.9h76.3v29.6h-76.3v-29.6z"/>
+			<text class="st4 st5 st6" transform="translate(1851.5 306.85)">Usenet.Farm</text>
+			<text class="st7 st8" transform="translate(1860.9 284.5)">Company</text>
+		</g>
+		<g id="Provider-Usenet.Farm">
+			<path class="st2" d="m1842.2 563.3h76.3v15.2h-76.3v-15.2z"/>
+			<path class="st37" d="M1842.2,578.4h76.3V608h-76.3V578.4z"/>
+			<text class="st4 st5 st6" transform="translate(1851.5 597.54)">Usenet.Farm</text>
+			<text class="st7 st8" transform="translate(1863.6 574.08)">Provider</text>
+			<path d="m1857.2 608.1h-15v-15"/>
+		</g>
+	</g>
+	<text class="st5 st38" transform="translate(899.92 136.35)">Usenet-Tree</text>
+	<text class="st5 st6" transform="translate(871.52 156.8)">This overview is based on the r/usenet Wiki, and the research of u/thepageunit.</text>
+	<g id="Legend">
+		<path class="st2" d="m124.5 161.2h76.3v15.2h-76.3v-15.2z"/>
+		<path class="st39" d="M124.5,176.4h76.3V206h-76.3V176.4z"/>
+		<text class="st4 st5 st6" transform="translate(137.42 194.36)">NTD-Policy</text>
+		<text class="st7 st8" transform="translate(147.2 172.02)">Legend</text>
+		<path d="m139.5 206h-15v-15"/>
+		<line class="st40" x1="185.2" x2="185.2" y1="161.2" y2="126.3"/>
+		<text class="st5 st6" transform="translate(189.14 144.44)">Hybrid/ Backup</text>
+	<text x="1853.8696" y="490.59601" fill="#000000" font-family="Helvetica" font-size="17.333px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1853.8696" y="490.59601" fill="#000000" font-family="Helvetica-Light" font-size="13.333px">?</tspan></text>
+<text x="1946.7269" y="490.59601" fill="#000000" font-family="Helvetica" font-size="17.333px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1946.7269" y="490.59601" fill="#000000" font-family="Helvetica-Light" font-size="13.333px">?</tspan></text>
+</g>
+<polyline class="st12" transform="translate(688.93 87.5)" points="693.4 394.2 834 394.2 989.6 394.2" fill="none" stroke="#ca054d" stroke-dasharray="12.6043, 12.6043" stroke-width="4"/><line class="st18" x1="1857.2" x2="1857.2" y1="547.5" y2="492.5" fill="#000000" stroke="#000000" stroke-dasharray="9.9841, 9.98409999999999975" stroke-width="4"/></g>
+</svg>
