@@ -172,6 +172,8 @@ Available command line args:
 
 ![NzbLiteClient](https://github.com/jhdscript/NzbLiteClient/blob/master/nzbliteclient.png)
 
+![NzbLiteClient Backup Mode](https://github.com/jhdscript/NzbLiteClient/blob/master/nzbliteclient_backup_mode.png)
+
 As you can see in this screenshot, NzbLiteClient is very performant and it could be used to backup or restore large volume of data.
 
 ## Technical information
