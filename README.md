@@ -232,7 +232,7 @@ If your usenet provider use HW Media backbone, you could have some issues after 
 
 I recommand you to use a newsgroup provider in another backbone for posting (cf. UseNet tree).
 
-![Usenet Tree](https://github.com/jhdscript/nzbliteclient/blob/master/usenet-tree.svg)
+![Usenet Tree](https://github.com/jhdscript/nzbliteclient/blob/master/usenet-tree.png)
 
 ## Changelog
 

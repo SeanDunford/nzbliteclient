@@ -1,0 +1,41 @@
+﻿{
+    "CleanNames": true,
+    "FileMinSize": 102400000,
+    "Filters": [ "*mkv$" ],
+    "RemoveMissing": true,
+    "PercentSuccess": 90,
+
+    "ApiKey": null,
+    "ApiSyncAuto": false,
+    "ApiSyncUrl": null,
+
+    "UsenetUsername": "user",
+    "UsenetPassword": "pass",
+    "UsenetServer": "reader.xsusenet.com",
+    "UsenetUseSSL": true,
+    "UsenetPort": 443,
+    "UsenetSlots": 20,
+    "UsenetNewsgroup": "alt.binaries.backup",
+
+    "ProxyEnabled": false,
+    "ProxyType": "socks5",
+    "ProxyServer": "fr.yoursock.fr",
+    "ProxyPort": 1111,
+    "ProxyUsername": "",
+    "ProxyPassword": "",
+
+    "ParRedundancy": 15,
+    "ParPath": "",
+    "ParThreads": 0,
+
+    "Folders": [
+        {
+            "Path": "V:\\",
+            "Encrypted": false,
+            "FileNamingRule": "PARENTNAME",
+            "Tag": "",
+            "Category": "Movies",
+            "Lang": "FR"
+        }
+    ]
+}
