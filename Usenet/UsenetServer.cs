@@ -362,7 +362,7 @@ namespace Usenet
         public static string IdToMessageId(string chunkId)
         {
             //var res = $"<{chunkId.Substring(0, chunkId.Length - 32)}@{chunkId.Substring(chunkId.Length - 32) }.local>";
-            var res = $"<{chunkId.Substring(0, chunkId.Length - 16)}@{chunkId.Substring(chunkId.Length - 48) }.local>";
+            var res = $"<{chunkId.Substring(0, chunkId.Length - 16)}@{chunkId.Substring(chunkId.Length - 48)}.local>";
             return res;
         }
         #endregion

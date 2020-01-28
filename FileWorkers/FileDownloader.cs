@@ -133,7 +133,7 @@ namespace FileWorkers
                 {
                     if (dlfi.ListOfPassNumber[i] < UsenetServer.MAX_PASS)
                     {
-                        UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath), i, dlfi.ListOfPassNumber[i], dlfi.ListOfPassNumber.Count, dl.Encrypted);
+                        UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath).Name, usenetId, i, dlfi.ListOfPassNumber[i], dlfi.ListOfPassNumber.Count, dl.Encrypted);
                         UsenetDownloader.AddChunk(chunk);
                     }
                     else
@@ -185,7 +185,7 @@ namespace FileWorkers
                         {
                             if (kvp.Value.ListOfPassNumber[i] < UsenetServer.MAX_PASS)
                             {
-                                UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath), i, kvp.Value.ListOfPassNumber[i], nbChunks, dl.Encrypted);
+                                UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath).Name, usenetId, i, kvp.Value.ListOfPassNumber[i], nbChunks, dl.Encrypted);
                                 UsenetDownloader.AddChunk(chunk);
                             }
                         }

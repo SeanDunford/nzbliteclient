@@ -84,7 +84,7 @@ namespace Usenet
                             if (isUploaded == false)
                             {
                                 chunk.SetId(UsenetServer.MAX_PASS);
-                                Logger.Warn(LOGNAME, "Cannot upload chunk " + chunk.Fi.Name + " (#" + chunk.ChunkNumber + ")");
+                                Logger.Warn(LOGNAME, "Cannot upload chunk " + chunk.Filename + " (#" + chunk.ChunkNumber + ")");
                             }
                             chunk.DataRaz();//free memory
                         }

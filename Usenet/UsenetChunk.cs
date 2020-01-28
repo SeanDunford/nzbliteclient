@@ -22,7 +22,8 @@ namespace Usenet
         #endregion
 
         #region Properties
-        public FileInfo Fi;
+        public string Filename;
+        public Guid FileId;
         public int ChunkNumber;
         public int TotalChunks;
         public string Id;
@@ -33,20 +34,22 @@ namespace Usenet
 
         #region Constructors
         //Constructor for upload
-        public UsenetChunk(BinaryReader br, FileInfo fi, int chunkNumber, int totalChunks, bool encrypted)
+        public UsenetChunk(BinaryReader br, string filename, Guid fileId, int chunkNumber, int totalChunks, bool encrypted)
         {
             Br = br;
-            Fi = fi;
+            Filename = filename;
+            FileId = fileId;
             ChunkNumber = chunkNumber;
             TotalChunks = totalChunks;
             Encrypted = encrypted;
         }
 
         //Constructor for download
-        public UsenetChunk(BinaryWriter bw, FileInfo fi, int chunkNumber, byte passNumber, int totalChunks, bool encrypted)
+        public UsenetChunk(BinaryWriter bw, string filename, Guid fileId, int chunkNumber, byte passNumber, int totalChunks, bool encrypted)
         {
             Bw = bw;
-            Fi = fi;
+            Filename = filename;
+            FileId = fileId;
             ChunkNumber = chunkNumber;
             TotalChunks = totalChunks;
             PassNumber = passNumber;
@@ -121,7 +124,7 @@ namespace Usenet
         {
             try
             {
-                Subject = GenerateChunkSubject(Fi.Name, ChunkNumber, TotalChunks);
+                Subject = GenerateChunkSubject(FileId, ChunkNumber, TotalChunks);
             }
             catch (Exception ex)
             {
@@ -134,7 +137,7 @@ namespace Usenet
             try
             {
                 PassNumber = passNumber;
-                Id = GenerateChunkId(Fi.Name, ChunkNumber, PassNumber);
+                Id = GenerateChunkId(FileId, ChunkNumber, PassNumber);
             }
             catch (Exception ex)
             {
@@ -142,12 +145,12 @@ namespace Usenet
             }
         }
 
-        public static string GenerateChunkId(string filename, long chunkNumber, int passNumber)
+        public static string GenerateChunkId(Guid fileId, long chunkNumber, int passNumber)
         {
             try
             {
-                string[] arr = { filename, chunkNumber.ToString(), passNumber.ToString() };
-                return Utilities.GenerateHash(string.Join("|||", arr));
+                string[] arr = { fileId.ToString(), chunkNumber.ToString(), passNumber.ToString() };
+                return Utilities.GenerateHash(Utilities.UTF8.GetBytes(string.Join("|||", arr)));
             }
             catch (Exception ex)
             {
@@ -156,13 +159,13 @@ namespace Usenet
             return null;
         }
 
-        public static string GenerateChunkSubject(string filename, long chunkNumber, long totalChunks)
+        public static string GenerateChunkSubject(Guid fileId, long chunkNumber, long totalChunks)
         {
             try
             {
                 //format: [01/10] - "JWR1574809494ip3UC191127MUN.part1.rar" yEnc (1/358)
                 //string[] arr = { filename, chunkExt };
-                return "[01/01] - \"" + Utilities.GenerateHash(filename) + "\" yEnc (" + (chunkNumber + 1) + "/" + totalChunks + ")";
+                return "[01/01] - \"" + Utilities.GenerateHash(fileId.ToByteArray()) + "\" yEnc (" + (chunkNumber + 1) + "/" + totalChunks + ")";
             }
             catch (Exception ex)
             {

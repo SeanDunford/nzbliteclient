@@ -73,7 +73,7 @@ namespace Usenet
                                 byte[] rawdata = us.Download(chunk);
                                 if (rawdata == null && i == MAX_RETRY - 1)
                                 {
-                                    Logger.Warn(LOGNAME, "Cannot download chunk " + chunk.Fi.Name + " (#" + chunk.ChunkNumber + ")");
+                                    Logger.Warn(LOGNAME, "Cannot download chunk " + chunk.Filename + " (#" + chunk.ChunkNumber + ")");
                                 }
                                 else
                                 {

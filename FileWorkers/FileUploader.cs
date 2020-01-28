@@ -170,7 +170,7 @@ namespace FileWorkers
                     dicoOfChunksPerExtension[extension] = new List<UsenetChunk>(nbChunks);
                     for (int i = 0; i < nbChunks; i++)
                     {
-                        UsenetChunk chunk = new UsenetChunk(br, fileToUpload, i, nbChunks, dbf.Encrypted);
+                        UsenetChunk chunk = new UsenetChunk(br, fileToUpload.Name, usenetId, i, nbChunks, dbf.Encrypted);
                         dicoOfChunksPerExtension[extension].Add(chunk);
                         UsenetUploader.AddChunk(chunk);
                     }

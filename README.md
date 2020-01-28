@@ -236,7 +236,12 @@ I recommand you to use a newsgroup provider in another backbone for posting (cf.
 
 ## Changelog
 
-### Version 1.0.0 (first release) - 20200124
+### Version 1.1.0.0 - 20200129
+
+* Implements NzbLite Format v3
+* Compatibility maintained with older versions
+
+### Version 1.0.0.0 (first release) - 20200124
 
 * Backup mode is fully working
 * Restore mode is fully working
@@ -248,7 +253,7 @@ I recommand you to use a newsgroup provider in another backbone for posting (cf.
 * CPU consumption reduced
 * Memory consumption reduced
 
-### Version 0.0.0 (pre version) - 20191201
+### Version 0.0.0.1 (pre version) - 20191201
 
 * First Batch of NzbLiteClient
 * All program architecture is defined

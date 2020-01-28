@@ -12,6 +12,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/jhdscript/NzbLiteClient/</RepositoryUrl>
     <ApplicationIcon>nzbliteclient.ico</ApplicationIcon>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
