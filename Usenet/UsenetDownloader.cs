@@ -15,6 +15,7 @@ namespace Usenet
         private static ConcurrentQueue<UsenetChunk> _queueOfChunks = new ConcurrentQueue<UsenetChunk>();
         private static int _remainingChunks = 0;
         private static byte[] _encKey;
+        private static byte _version;
 
         public static bool IsFinished()
         {
@@ -35,12 +36,13 @@ namespace Usenet
             return false;
         }
 
-        public static bool Run(byte[] encKey)
+        public static bool Run(byte[] encKey, byte version)
         {
             try
             {
                 _remainingChunks = _queueOfChunks.Count;
                 _encKey = encKey;
+                _version = version;
                 for (int i = 0; i < UsenetConns.ListOfConns.Count; i++)
                 {
                     Task t = new Task(Process, i);
@@ -71,15 +73,16 @@ namespace Usenet
                             for (int i = 0; i < MAX_RETRY; i++)
                             {
                                 byte[] rawdata = us.Download(chunk);
-                                if (rawdata == null && i == MAX_RETRY - 1)
+                                if (rawdata == null || rawdata.Length == 0)
                                 {
-                                    Logger.Warn(LOGNAME, "Cannot download chunk " + chunk.Filename + " (#" + chunk.ChunkNumber + ")");
+                                    if (i == MAX_RETRY - 1)
+                                    {
+                                        Logger.Warn(LOGNAME, "Cannot download chunk " + chunk.Filename + " (#" + chunk.ChunkNumber + ")");
+                                    }
+                                    continue;
                                 }
-                                else
-                                {
-                                    chunk.DataSet(rawdata, _encKey);
-                                    chunk.WriteDataToBw();
-                                }
+                                chunk.DataSet(rawdata, _encKey);
+                                chunk.WriteDataToBw();
                             }
                             chunk.DataRaz();//free memory
                         }

@@ -238,6 +238,11 @@ I recommand you to use a newsgroup provider in another backbone for posting (cf.
 
 ### Version 1.1.0.0 - 20200129
 
+* Implements NzbLite Format v4
+* Compatibility with older versions removed
+
+### Version 1.1.0.0 - 20200128
+
 * Implements NzbLite Format v3
 * Compatibility maintained with older versions
 

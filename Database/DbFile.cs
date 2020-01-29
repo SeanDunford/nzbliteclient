@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Classes;
 
 namespace Database
 {
@@ -24,6 +25,6 @@ namespace Database
         public string Tag;
         public string Category;
         public string Lang;
-        public bool Encrypted = true;
+        public Utilities.EncryptionMode EncryptionMode = Utilities.EncryptionMode.NONE;
     }
 }

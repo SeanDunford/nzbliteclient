@@ -170,7 +170,7 @@ namespace FileWorkers
                     dicoOfChunksPerExtension[extension] = new List<UsenetChunk>(nbChunks);
                     for (int i = 0; i < nbChunks; i++)
                     {
-                        UsenetChunk chunk = new UsenetChunk(br, fileToUpload.Name, usenetId, i, nbChunks, dbf.Encrypted);
+                        UsenetChunk chunk = new UsenetChunk(br, fileToUpload.Name, usenetId, extension, i, nbChunks, dbf.EncryptionMode);
                         dicoOfChunksPerExtension[extension].Add(chunk);
                         UsenetUploader.AddChunk(chunk);
                     }
@@ -219,7 +219,7 @@ namespace FileWorkers
                         dicoOfPassNumberPerExtension[extension] = dlfi;
                     }
 
-                    DownloadLink dl = new DownloadLink(usenetId, dbf.Name, dbf.Checksum, Settings.Settings.Current.UsenetNewsgroup, posterEmail, Utilities.UnixTimestampFromDate(DateTime.UtcNow), dbf.Encrypted, dicoOfPassNumberPerExtension); ;
+                    DownloadLink dl = new DownloadLink(DownloadLink.VERSION, usenetId, dbf.Name, dbf.Checksum, Utilities.UnixTimestampFromDate(DateTime.UtcNow), dbf.EncryptionMode, dicoOfPassNumberPerExtension); ;
                     dbf.DownloadLink = DownloadLink.ToString(dl);
                 }
 
@@ -234,7 +234,7 @@ namespace FileWorkers
             return false;
         }
 
-        public static void UploadSingleFile(FileInfo fi, bool encrypted)
+        public static void UploadSingleFile(FileInfo fi, Utilities.EncryptionMode encryptionMode)
         {
             try
             {
@@ -244,7 +244,7 @@ namespace FileWorkers
                 dbf.Name = fi.Name;
                 dbf.Tag = null;
                 dbf.Category = null;
-                dbf.Encrypted = encrypted;
+                dbf.EncryptionMode = encryptionMode;
                 dbf.Size = fi.Length;
                 dbf.Checksum = Checksum.Calculate(fi);
                 if (UploadProcess(dbf) == false)

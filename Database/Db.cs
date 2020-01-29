@@ -18,6 +18,7 @@ namespace Database
         private static bool _needToSave = false;
         private static Task _taskSave = new Task(TaskSave);
         private static bool _taskSaveStarted = false;
+        private static object _saveLock = new object();
         #endregion
 
         #region Start
@@ -43,7 +44,7 @@ namespace Database
                                             dbf.Status = DbFile.State.QUEUED;
                                             _dicoOfFiles[dbf.Id] = dbf;
                                         }
-                                    }                                    
+                                    }
                                 }
                                 else
                                 {
@@ -61,7 +62,7 @@ namespace Database
                 if (startTaskSave && _taskSaveStarted == false)
                 {
                     _taskSave.Start();
-                }                
+                }
                 return true;
             }
             catch (Exception ex)
@@ -98,18 +99,21 @@ namespace Database
         {
             try
             {
-                string backup = Utilities.FileDb + DateTime.UtcNow.ToString("yyyyMMdd HHmmss") + Utilities.EXT_BACKUP;
-                if (File.Exists(Utilities.FileDb))
+                lock (_saveLock)
                 {
-                    File.Move(Utilities.FileDb, backup);
-                }
+                    string backup = Utilities.FileDb + DateTime.UtcNow.ToString("yyyyMMdd HHmmss") + Utilities.EXT_BACKUP;
+                    if (File.Exists(Utilities.FileDb))
+                    {
+                        File.Move(Utilities.FileDb, backup);
+                    }
 
-                List<DbFile> listOfFiles = _dicoOfFiles.Values.ToList();
-                if (Serializer.Serialize(listOfFiles, Utilities.FileDb) == true)
-                {
-                    File.Delete(backup);
+                    List<DbFile> listOfFiles = _dicoOfFiles.Values.ToList();
+                    if (Serializer.Serialize(listOfFiles, Utilities.FileDb) == true)
+                    {
+                        File.Delete(backup);
+                    }
+                    _needToSave = false;
                 }
-                _needToSave = false;
                 return true;
             }
             catch (Exception ex)

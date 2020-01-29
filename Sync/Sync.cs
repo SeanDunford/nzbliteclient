@@ -39,7 +39,7 @@ namespace Sync
                     Tag = dbf.Tag,
                     Category = dbf.Category,
                     Lang = dbf.Lang,
-                    Encrypted = dbf.Encrypted
+                    EncryptionMode = dbf.EncryptionMode
                 };
 
                 string json = Serializer.Serialize(si);

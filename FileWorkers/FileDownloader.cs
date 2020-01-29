@@ -15,6 +15,7 @@ namespace FileWorkers
         #region Properties
         private const string LOGNAME = "[FILEDOWNLOADER]";
         private const int WAIT = 15 * 1000;
+        private const int MINIMAL_VERSION_SUPPORTED = 4;
         private static bool _isStarted = false;
         private static Task _taskDownload = new Task(Download);
         #endregion
@@ -98,6 +99,11 @@ namespace FileWorkers
         {
             try
             {
+                if (dl.Version < MINIMAL_VERSION_SUPPORTED)
+                {
+                    Logger.Warn(LOGNAME, "This NzbLiteClient version doesn't support NzbLite format < " + MINIMAL_VERSION_SUPPORTED);
+                    return false;
+                }
                 DirectoryInfo workingDir = new DirectoryInfo(Utilities.FolderTemp);
                 //On clean le workingdir
                 FileInfo[] filesToRemove = workingDir.GetFiles();
@@ -133,7 +139,7 @@ namespace FileWorkers
                 {
                     if (dlfi.ListOfPassNumber[i] < UsenetServer.MAX_PASS)
                     {
-                        UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath).Name, usenetId, i, dlfi.ListOfPassNumber[i], dlfi.ListOfPassNumber.Count, dl.Encrypted);
+                        UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath).Name, usenetId, Utilities.EXT_RAW, i, dlfi.ListOfPassNumber[i], dlfi.ListOfPassNumber.Count, dl.EncryptionMode); ;
                         UsenetDownloader.AddChunk(chunk);
                     }
                     else
@@ -145,7 +151,7 @@ namespace FileWorkers
                 //2- Run Download Tasks
                 Logger.Info(LOGNAME, "Download starts " + usenetIdStr);
                 perfDownload.Start();
-                UsenetDownloader.Run(encKey);
+                UsenetDownloader.Run(encKey, dl.Version);
 
                 //3- Checking for end
                 while (UsenetDownloader.IsFinished() == false)
@@ -185,7 +191,7 @@ namespace FileWorkers
                         {
                             if (kvp.Value.ListOfPassNumber[i] < UsenetServer.MAX_PASS)
                             {
-                                UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath).Name, usenetId, i, kvp.Value.ListOfPassNumber[i], nbChunks, dl.Encrypted);
+                                UsenetChunk chunk = new UsenetChunk(bw, new FileInfo(filepath).Name, usenetId, extension, i, kvp.Value.ListOfPassNumber[i], nbChunks, dl.EncryptionMode);
                                 UsenetDownloader.AddChunk(chunk);
                             }
                         }
@@ -194,7 +200,7 @@ namespace FileWorkers
                     //Run Download Tasks
                     Logger.Info(LOGNAME, "Download Par starts " + usenetIdStr);
                     perfDownload.Start();
-                    UsenetDownloader.Run(encKey);
+                    UsenetDownloader.Run(encKey, dl.Version);
 
                     //Checking for end
                     while (UsenetDownloader.IsFinished() == false)

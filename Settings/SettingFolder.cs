@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
+using Classes;
 
 namespace Settings
 {
@@ -24,7 +25,7 @@ namespace Settings
         public string Tag;
         public string Category;
         public string Lang; //2Letters language
-        public bool Encrypted = false;
+        public Utilities.EncryptionMode EncryptionMode = Utilities.EncryptionMode.NONE;
 
         public FileNamingRuleEnum GetFileNamingRule()
         {

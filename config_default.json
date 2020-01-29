@@ -31,7 +31,7 @@
     "Folders": [
         {
             "Path": "V:\\",
-            "Encrypted": false,
+            "EncryptionMode": 0,
             "FileNamingRule": "PARENTNAME",
             "Tag": "",
             "Category": "Movies",

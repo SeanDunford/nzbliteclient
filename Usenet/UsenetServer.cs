@@ -111,11 +111,7 @@ namespace Usenet
 
             try
             {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    Download(client.RetrieveArticleBody(IdToMessageId(chunk.Id)), ms);
-                    return ms.ToArray();
-                }
+                return Download(client.RetrieveArticleBody(IdToMessageId(chunk.Id)));
             }
             catch (Exception ex)
             {
@@ -129,9 +125,9 @@ namespace Usenet
         }
 
 
-        private void Download(IEnumerable<string> body, Stream outputStream)
+        private byte[] Download(IEnumerable<string> body)
         {
-            byte[] buffer = new byte[4096];
+            byte[] buffer = new byte[Utilities.ARTICLE_SIZE];
             using (MemoryStream tmpStream = new MemoryStream())
             {
                 tmpStream.Position = 0;
@@ -162,14 +158,15 @@ namespace Usenet
                 tmpStream.Position = 0;
 
                 YEncDecoder yencDecoder = new YEncDecoder();
-
                 using (CryptoStream yencStream = new CryptoStream(tmpStream, yencDecoder, CryptoStreamMode.Read))
                 {
+                    List<byte> b = new List<byte>(Utilities.ARTICLE_SIZE);
                     int read = 0;
                     while ((read = yencStream.Read(buffer, 0, buffer.Length)) > 0)
                     {
-                        outputStream.Write(buffer, 0, read);
+                        b.AddRange(buffer.Take(read));
                     }
+                    return b.ToArray();
                 }
             }
         }

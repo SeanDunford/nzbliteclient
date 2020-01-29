@@ -136,7 +136,7 @@ namespace FileWorkers
                         dbf.Tag = sf.Tag;
                         dbf.Category = sf.Category;
                         dbf.Lang = sf.Lang;
-                        dbf.Encrypted = sf.Encrypted;
+                        dbf.EncryptionMode = sf.EncryptionMode;
                         dbf.Checksum = null;
                         dbf.Size = fi.Length;
                         Db.FileSave(dbf, DbFile.State.QUEUED);

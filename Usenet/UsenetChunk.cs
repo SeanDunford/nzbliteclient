@@ -11,6 +11,7 @@ namespace Usenet
     public class UsenetChunk
     {
         private const string LOGNAME = "[USENETCHUNK]";
+        private const char SEPARATOR = '|';
 
         #region Upload Properties
         public BinaryReader Br;
@@ -24,36 +25,39 @@ namespace Usenet
         #region Properties
         public string Filename;
         public Guid FileId;
+        public string ChunkExt;
         public int ChunkNumber;
         public int TotalChunks;
         public string Id;
         public string Subject;
         public byte[] Data;
-        public bool Encrypted;
+        public Utilities.EncryptionMode EncryptionMode;
         #endregion
 
         #region Constructors
         //Constructor for upload
-        public UsenetChunk(BinaryReader br, string filename, Guid fileId, int chunkNumber, int totalChunks, bool encrypted)
+        public UsenetChunk(BinaryReader br, string filename, Guid fileId,string chunkExt, int chunkNumber, int totalChunks, Utilities.EncryptionMode encryptionMode)
         {
             Br = br;
             Filename = filename;
             FileId = fileId;
+            ChunkExt = chunkExt;
             ChunkNumber = chunkNumber;
             TotalChunks = totalChunks;
-            Encrypted = encrypted;
+            EncryptionMode = encryptionMode;
         }
 
         //Constructor for download
-        public UsenetChunk(BinaryWriter bw, string filename, Guid fileId, int chunkNumber, byte passNumber, int totalChunks, bool encrypted)
+        public UsenetChunk(BinaryWriter bw, string filename, Guid fileId, string chunkExt, int chunkNumber, byte passNumber, int totalChunks, Utilities.EncryptionMode encryptionMode)
         {
             Bw = bw;
             Filename = filename;
             FileId = fileId;
+            ChunkExt = chunkExt;
             ChunkNumber = chunkNumber;
             TotalChunks = totalChunks;
             PassNumber = passNumber;
-            Encrypted = encrypted;
+            EncryptionMode = encryptionMode;
         }
         #endregion
 
@@ -66,10 +70,10 @@ namespace Usenet
                     Br.BaseStream.Position = ((long)(ChunkNumber) * Utilities.ARTICLE_SIZE);
                     Data = Br.ReadBytes(Utilities.ARTICLE_SIZE);
                 }
-                if (Encrypted == true)
+                if (EncryptionMode == Utilities.EncryptionMode.XOR)
                 {
                     FileXorifier.Xorify(ref Data, Data.Length, encKey);
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -97,10 +101,10 @@ namespace Usenet
             try
             {
                 Data = rawData;
-                if (Encrypted == true)
+                if (EncryptionMode ==  Utilities.EncryptionMode.XOR)
                 {
                     FileXorifier.Xorify(ref Data, Data.Length, encKey);
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -124,7 +128,7 @@ namespace Usenet
         {
             try
             {
-                Subject = GenerateChunkSubject(FileId, ChunkNumber, TotalChunks);
+                Subject = GenerateChunkSubject(FileId, ChunkExt, ChunkNumber, TotalChunks);
             }
             catch (Exception ex)
             {
@@ -137,7 +141,7 @@ namespace Usenet
             try
             {
                 PassNumber = passNumber;
-                Id = GenerateChunkId(FileId, ChunkNumber, PassNumber);
+                Id = GenerateChunkId(FileId, ChunkExt, ChunkNumber, PassNumber);
             }
             catch (Exception ex)
             {
@@ -145,12 +149,12 @@ namespace Usenet
             }
         }
 
-        public static string GenerateChunkId(Guid fileId, long chunkNumber, int passNumber)
+        public static string GenerateChunkId(Guid fileId, string chunkExt, long chunkNumber, int passNumber)
         {
             try
             {
-                string[] arr = { fileId.ToString(), chunkNumber.ToString(), passNumber.ToString() };
-                return Utilities.GenerateHash(Utilities.UTF8.GetBytes(string.Join("|||", arr)));
+                string[] arr = { fileId.ToString(), chunkExt, chunkNumber.ToString(), passNumber.ToString() };
+                return Utilities.GenerateHash(string.Join(SEPARATOR, arr));
             }
             catch (Exception ex)
             {
@@ -159,13 +163,13 @@ namespace Usenet
             return null;
         }
 
-        public static string GenerateChunkSubject(Guid fileId, long chunkNumber, long totalChunks)
+        public static string GenerateChunkSubject(Guid fileId, string chunkExt, long chunkNumber, long totalChunks)
         {
             try
             {
                 //format: [01/10] - "JWR1574809494ip3UC191127MUN.part1.rar" yEnc (1/358)
                 //string[] arr = { filename, chunkExt };
-                return "[01/01] - \"" + Utilities.GenerateHash(fileId.ToByteArray()) + "\" yEnc (" + (chunkNumber + 1) + "/" + totalChunks + ")";
+                return "[01/01] - \"" + Utilities.GenerateHash(fileId.ToString() + SEPARATOR + chunkExt) + "\" yEnc (" + (chunkNumber + 1) + "/" + totalChunks + ")";
             }
             catch (Exception ex)
             {
@@ -173,5 +177,33 @@ namespace Usenet
             }
             return null;
         }
+
+        //#region Compatibility with NzbLite Format v2
+        //public void CompatV2SetId(byte passNumber)
+        //{
+        //    try
+        //    {
+        //        PassNumber = passNumber;
+        //        Id = CompatV2GenerateChunkId(Filename, ChunkNumber, PassNumber);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.Error(LOGNAME, ex.Message, ex);
+        //    }
+        //}
+        //public static string CompatV2GenerateChunkId(string filename, long chunkNumber, int passNumber)
+        //{
+        //    try
+        //    {
+        //        string[] arr = { filename, chunkNumber.ToString(), passNumber.ToString() };
+        //        return Utilities.GenerateHash(string.Join(SEPARATOR, arr));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.Error(LOGNAME, ex.Message, ex);
+        //    }
+        //    return null;
+        //}
+        //#endregion
     }
 }

@@ -18,7 +18,7 @@ namespace Classes
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    using (GZipStream gz = new GZipStream(ms, CompressionLevel.Optimal))
+                    using (DeflateStream gz = new DeflateStream(ms, CompressionLevel.Optimal))
                     {
                         gz.Write(b, 0, b.Length);
                     }
@@ -39,7 +39,7 @@ namespace Classes
             {
                 using (MemoryStream ms = new MemoryStream(b))
                 {
-                    using (GZipStream gz = new GZipStream(ms, CompressionMode.Decompress))
+                    using (DeflateStream gz = new DeflateStream(ms, CompressionMode.Decompress))
                     {
                         using (MemoryStream ms2 = new MemoryStream())
                         {

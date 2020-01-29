@@ -165,13 +165,18 @@ namespace Classes
         #endregion
 
         #region Encryption
-        public static string GenerateHash(byte[] rawData)
+        public enum EncryptionMode
+        {
+            NONE = 0,
+            XOR = 1
+        }
+        public static string GenerateHash(string rawData)
         {
             // Create a SHA256   
             using (SHA256 sha256Hash = SHA256.Create())
             {
                 // ComputeHash - returns byte array  
-                byte[] b = sha256Hash.ComputeHash(rawData);
+                byte[] b = sha256Hash.ComputeHash(UTF8.GetBytes(rawData));
                 return BytesToHex(b);
             }
         }

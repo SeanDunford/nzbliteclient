@@ -9,7 +9,6 @@ namespace Sync
     class SyncItem
     {
         public string Key;
-
         public string Name;
         public long Size;
         public string Checksum;
@@ -17,6 +16,6 @@ namespace Sync
         public string Tag;
         public string Category;
         public string Lang;
-        public bool Encrypted;
+        public Classes.Utilities.EncryptionMode EncryptionMode;
     }
 }

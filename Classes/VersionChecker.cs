@@ -27,14 +27,15 @@ namespace Classes
                         Version tmp = Version.Parse(res);
                         if (tmp > currentVersion)
                         {
-                            Logger.Info(LOGNAME, "New NzbLiteClient version detected: "+ tmp+" (current: "+currentVersion+"). Please visit https://www.nzblite.com to download the latest version.");
+                            Logger.Info(LOGNAME, "New NzbLiteClient version detected: " + tmp + " (current: " + currentVersion + "). Please visit https://www.nzblite.com to download the latest version.");
                             return true;
                         }
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
                 Logger.Warn(LOGNAME, "Error checking new version");
             }
             return false;

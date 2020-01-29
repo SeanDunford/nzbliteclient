@@ -27,7 +27,7 @@ namespace NzbLiteClient
                 Console.WriteLine("|  \\| |___| |__ | |     _| |_ ___| |    | |_  ___ _ __ | |_ ");
                 Console.WriteLine("| . ` |_  / '_ \\| |    | | __/ _ \\ |    | | |/ _ \\ '_ \\| __|");
                 Console.WriteLine("| |\\  |/ /| |_) | |____| | ||  __/ |____| | |  __/ | | | |_ ");
-                Console.WriteLine("|_| \\_/___|_.__/|______|_|\\__\\___|\\_____|_|_|\\___|_| |_|\\__|");
+                Console.WriteLine("|_| \\_/___|_.__/|______|_|\\__\\___|\\_____|_|_|\\___|_| |_|\\__| (v"+ Utilities.CurrentVersion().ToString() + ")");
             }
             Utilities.EnsureDirectories();
             Utilities.InitiateSSLTrust();
@@ -99,7 +99,7 @@ namespace NzbLiteClient
                         break;
 
                     case "-u":
-                        ModeUpload(param, true);
+                        ModeUpload(param, Utilities.EncryptionMode.NONE);
                         break;
 
                     case "-d":
@@ -207,11 +207,11 @@ namespace NzbLiteClient
             }
         }
 
-        private static void ModeUpload(string filepath, bool encrypted)
+        private static void ModeUpload(string filepath, Utilities.EncryptionMode encryptionMode)
         {
             try
             {
-                FileUploader.UploadSingleFile(new FileInfo(filepath), encrypted);
+                FileUploader.UploadSingleFile(new FileInfo(filepath), encryptionMode);
             }
             catch (Exception ex)
             {
@@ -293,7 +293,6 @@ namespace NzbLiteClient
             bool loop = true;
             string dlLink = null;
             string outputDir = null;
-            DownloadLink dl = null;
             while (loop)
             {
                 Console.WriteLine(SEP);
@@ -342,14 +341,19 @@ namespace NzbLiteClient
                     case "3":
                         Console.WriteLine("Enter filepath to upload:");
                         string filepath = Console.ReadLine();
-                        Console.WriteLine("Encrypt file (y/n):");
+                        Console.WriteLine("Encrypt file with XOR (y/n):");
                         string encrypted = Console.ReadLine();
                         if (string.IsNullOrEmpty(filepath) || File.Exists(filepath) == false)
                         {
                             Console.WriteLine("File not found !");
                             continue;
                         }
-                        ModeUpload(filepath, (encrypted != null && encrypted.ToLower() == "y"));
+                        Utilities.EncryptionMode encryptionMode = Utilities.EncryptionMode.NONE;
+                        if (encrypted != null && encrypted.ToLower() == "y")
+                        {
+                            encryptionMode = Utilities.EncryptionMode.XOR;
+                        }
+                        ModeUpload(filepath, encryptionMode);
                         break;
 
                     case "4":
