@@ -1,7 +1,7 @@
 ﻿{
     "CleanNames": true,
     "FileMinSize": 102400000,
-    "Filters": [ "*mkv$" ],
+    "Filters": [ ".*mkv$" ],
     "RemoveMissing": true,
     "PercentSuccess": 90,
 
