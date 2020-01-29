@@ -236,7 +236,7 @@ I recommand you to use a newsgroup provider in another backbone for posting (cf.
 
 ## Changelog
 
-### Version 1.1.0.0 - 20200129
+### Version 1.2.0.0 - 20200129
 
 * Implements NzbLite Format v4
 * Compatibility with older versions removed
