@@ -16,6 +16,6 @@ namespace Sync
         public string Tag;
         public string Category;
         public string Lang;
-        public Classes.Utilities.EncryptionMode EncryptionMode;
+        public Classes.Crypto.EncryptionMode EncryptionMode;
     }
 }

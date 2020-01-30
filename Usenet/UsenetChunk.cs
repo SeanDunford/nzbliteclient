@@ -31,12 +31,12 @@ namespace Usenet
         public string Id;
         public string Subject;
         public byte[] Data;
-        public Utilities.EncryptionMode EncryptionMode;
+        public Crypto.EncryptionMode EncryptionMode;
         #endregion
 
         #region Constructors
         //Constructor for upload
-        public UsenetChunk(BinaryReader br, string filename, Guid fileId,string chunkExt, int chunkNumber, int totalChunks, Utilities.EncryptionMode encryptionMode)
+        public UsenetChunk(BinaryReader br, string filename, Guid fileId,string chunkExt, int chunkNumber, int totalChunks, Crypto.EncryptionMode encryptionMode)
         {
             Br = br;
             Filename = filename;
@@ -48,7 +48,7 @@ namespace Usenet
         }
 
         //Constructor for download
-        public UsenetChunk(BinaryWriter bw, string filename, Guid fileId, string chunkExt, int chunkNumber, byte passNumber, int totalChunks, Utilities.EncryptionMode encryptionMode)
+        public UsenetChunk(BinaryWriter bw, string filename, Guid fileId, string chunkExt, int chunkNumber, byte passNumber, int totalChunks, Crypto.EncryptionMode encryptionMode)
         {
             Bw = bw;
             Filename = filename;
@@ -70,9 +70,9 @@ namespace Usenet
                     Br.BaseStream.Position = ((long)(ChunkNumber) * Utilities.ARTICLE_SIZE);
                     Data = Br.ReadBytes(Utilities.ARTICLE_SIZE);
                 }
-                if (EncryptionMode == Utilities.EncryptionMode.XOR)
+                if (EncryptionMode == Crypto.EncryptionMode.XOR)
                 {
-                    FileXorifier.Xorify(ref Data, Data.Length, encKey);
+                    Crypto.Xorify(ref Data, Data.Length, encKey);
                 }
             }
             catch (Exception ex)
@@ -101,9 +101,9 @@ namespace Usenet
             try
             {
                 Data = rawData;
-                if (EncryptionMode ==  Utilities.EncryptionMode.XOR)
+                if (EncryptionMode == Crypto.EncryptionMode.XOR)
                 {
-                    FileXorifier.Xorify(ref Data, Data.Length, encKey);
+                    Crypto.Xorify(ref Data, Data.Length, encKey);
                 }
             }
             catch (Exception ex)
@@ -154,7 +154,7 @@ namespace Usenet
             try
             {
                 string[] arr = { fileId.ToString(), chunkExt, chunkNumber.ToString(), passNumber.ToString() };
-                return Utilities.GenerateHash(string.Join(SEPARATOR, arr));
+                return Crypto.GenerateHash(string.Join(SEPARATOR, arr));
             }
             catch (Exception ex)
             {
@@ -169,7 +169,7 @@ namespace Usenet
             {
                 //format: [01/10] - "JWR1574809494ip3UC191127MUN.part1.rar" yEnc (1/358)
                 //string[] arr = { filename, chunkExt };
-                return "[01/01] - \"" + Utilities.GenerateHash(fileId.ToString() + SEPARATOR + chunkExt) + "\" yEnc (" + (chunkNumber + 1) + "/" + totalChunks + ")";
+                return "[01/01] - \"" + Crypto.GenerateHash(fileId.ToString() + SEPARATOR + chunkExt) + "\" yEnc (" + (chunkNumber + 1) + "/" + totalChunks + ")";
             }
             catch (Exception ex)
             {

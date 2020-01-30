@@ -18,13 +18,13 @@ namespace Classes
         public Guid Id;
         public byte Version;
         public uint PostDate;
-        public Utilities.EncryptionMode EncryptionMode;
+        public Crypto.EncryptionMode EncryptionMode;
         public string Name;
         public string Checksum;
         public Dictionary<string, DownloadLinkFileInfo> DicoOfPassNumberPerExtension; //key: fileExtension - value: DownloadLinkFileInfo
         #endregion
 
-        public DownloadLink(byte version, Guid id, string name, string checksum, uint postDate, Utilities.EncryptionMode encryptionMode, Dictionary<string, DownloadLinkFileInfo> dicoOfPassNumberPerExtension)
+        public DownloadLink(byte version, Guid id, string name, string checksum, uint postDate, Crypto.EncryptionMode encryptionMode, Dictionary<string, DownloadLinkFileInfo> dicoOfPassNumberPerExtension)
         {
             try
             {
@@ -87,7 +87,7 @@ namespace Classes
                 string tmpName;
                 string tmpChecksum;
                 uint tmpPostDate;
-                Utilities.EncryptionMode tmpEncryption;
+                Crypto.EncryptionMode tmpEncryption;
                 Dictionary<string, DownloadLinkFileInfo> tmpDicoOfPassNumberPerExtension = new Dictionary<string, DownloadLinkFileInfo>();
 
                 byte[] b = Utilities.HexToBytes(str);
@@ -99,7 +99,7 @@ namespace Classes
                     tmpName = StringRead(br);
                     tmpChecksum = Utilities.BytesToHex(br.ReadBytes(16));
                     tmpPostDate = br.ReadUInt32();
-                    tmpEncryption = (Utilities.EncryptionMode)br.ReadByte();
+                    tmpEncryption = (Crypto.EncryptionMode)br.ReadByte();
                     ushort nbExt = br.ReadUInt16();
 
                     for (ushort i = 0; i < nbExt; i++)

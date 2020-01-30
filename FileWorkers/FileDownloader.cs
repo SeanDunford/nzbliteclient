@@ -117,7 +117,7 @@ namespace FileWorkers
                 Stopwatch perfDownload = new Stopwatch();
 
                 Guid usenetId = dl.Id;
-                byte[] encKey = FileXorifier.GenerateXorKey(usenetId);
+                byte[] encKey = Crypto.GenerateEncryptionKey(usenetId, dl.EncryptionMode);
                 string usenetIdStr = usenetId.ToString();
 
                 Logger.Info(LOGNAME, "Start " + usenetIdStr);
@@ -164,6 +164,7 @@ namespace FileWorkers
                 //4- Checksum for rawFile
                 bool success = false;
                 string checksum = Checksum.Calculate(fi);
+                //checksum = "fakechecksum"; // DEBUG ONLY
                 if (dl.Checksum == checksum) //File is OK
                 {
                     success = true;
@@ -259,7 +260,7 @@ namespace FileWorkers
 
                 if (success == true)
                 {
-                    Logger.Info(LOGNAME, "Success " + dl.Id + " (name: " + dl.Name + " - par: " + (long)(perfPar.ElapsedMilliseconds / 1000) + "s - down: " + (long)(perfDownload.ElapsedMilliseconds / 1000) + "s - speed: " + Utilities.ConvertSizeToHumanReadable(totalSize / (perfDownload.ElapsedMilliseconds / 1000)) + "b/s)");
+                    Logger.Info(LOGNAME, "Success " + dl.Id + " (name: " + dl.Name + " - par: " + (long)(perfPar.ElapsedMilliseconds / 1000) + "s - down: " + (long)((perfDownload.ElapsedMilliseconds < 1000 ? 1000 : perfDownload.ElapsedMilliseconds) / 1000) + "s - speed: " + Utilities.ConvertSizeToHumanReadable(totalSize / (perfDownload.ElapsedMilliseconds / 1000)) + "b/s)");
                 }
                 else
                 {

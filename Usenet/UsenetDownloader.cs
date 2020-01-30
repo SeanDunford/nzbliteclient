@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -72,7 +73,21 @@ namespace Usenet
                             chunk.SetId(chunk.PassNumber);
                             for (int i = 0; i < MAX_RETRY; i++)
                             {
-                                byte[] rawdata = us.Download(chunk);
+                                byte[] rawdata = null;
+
+                                ////DEBUG ONLY START
+                                //string chunkPath = Path.Combine(Utilities.ExecutableFolder, "chunks", chunk.ChunkExt + "_" + chunk.ChunkNumber + "_" + chunk.Id);
+                                //if (File.Exists(chunkPath))
+                                //{
+                                //    rawdata = File.ReadAllBytes(chunkPath);
+                                //    chunk.DataSet(rawdata, _encKey);
+                                //    chunk.WriteDataToBw();
+                                //}
+                                //break;
+                                ////DEBUG ONLY END
+
+
+                                rawdata = us.Download(chunk);
                                 if (rawdata == null || rawdata.Length == 0)
                                 {
                                     if (i == MAX_RETRY - 1)

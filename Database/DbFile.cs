@@ -25,6 +25,6 @@ namespace Database
         public string Tag;
         public string Category;
         public string Lang;
-        public Utilities.EncryptionMode EncryptionMode = Utilities.EncryptionMode.NONE;
+        public Crypto.EncryptionMode EncryptionMode = Crypto.EncryptionMode.NONE;
     }
 }

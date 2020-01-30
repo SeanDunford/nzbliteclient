@@ -27,7 +27,7 @@ namespace NzbLiteClient
                 Console.WriteLine("|  \\| |___| |__ | |     _| |_ ___| |    | |_  ___ _ __ | |_ ");
                 Console.WriteLine("| . ` |_  / '_ \\| |    | | __/ _ \\ |    | | |/ _ \\ '_ \\| __|");
                 Console.WriteLine("| |\\  |/ /| |_) | |____| | ||  __/ |____| | |  __/ | | | |_ ");
-                Console.WriteLine("|_| \\_/___|_.__/|______|_|\\__\\___|\\_____|_|_|\\___|_| |_|\\__| (v"+ Utilities.CurrentVersion().ToString() + ")");
+                Console.WriteLine("|_| \\_/___|_.__/|______|_|\\__\\___|\\_____|_|_|\\___|_| |_|\\__| (v" + Utilities.CurrentVersion().ToString() + ")");
             }
             Utilities.EnsureDirectories();
             Utilities.InitiateSSLTrust();
@@ -99,7 +99,7 @@ namespace NzbLiteClient
                         break;
 
                     case "-u":
-                        ModeUpload(param, Utilities.EncryptionMode.NONE);
+                        ModeUpload(param, Crypto.EncryptionMode.NONE, outputDir);
                         break;
 
                     case "-d":
@@ -119,6 +119,7 @@ namespace NzbLiteClient
                         break;
                 }
             }
+            string k = "";
         }
 
         private static bool Init()
@@ -207,11 +208,27 @@ namespace NzbLiteClient
             }
         }
 
-        private static void ModeUpload(string filepath, Utilities.EncryptionMode encryptionMode)
+        private static void ModeUpload(string filepath, Crypto.EncryptionMode encryptionMode, string savepath)
         {
             try
             {
-                FileUploader.UploadSingleFile(new FileInfo(filepath), encryptionMode);
+                DbFile dbf = FileUploader.UploadSingleFile(new FileInfo(filepath), encryptionMode);
+                string nzblPath = filepath + Utilities.EXT_NZBL;
+                if (string.IsNullOrEmpty(savepath) == false)
+                {
+                    if (Directory.Exists(savepath))
+                    {
+                        nzblPath = Path.Combine(savepath, new FileInfo(filepath).Name + Utilities.EXT_NZBL);
+                    }
+                    else
+                    {
+                        nzblPath = savepath;
+                    }
+                }
+                if (dbf != null)
+                {
+                    File.WriteAllBytes(nzblPath, Utilities.HexToBytes(dbf.DownloadLink));
+                }
             }
             catch (Exception ex)
             {
@@ -348,12 +365,14 @@ namespace NzbLiteClient
                             Console.WriteLine("File not found !");
                             continue;
                         }
-                        Utilities.EncryptionMode encryptionMode = Utilities.EncryptionMode.NONE;
+                        Crypto.EncryptionMode encryptionMode = Crypto.EncryptionMode.NONE;
                         if (encrypted != null && encrypted.ToLower() == "y")
                         {
-                            encryptionMode = Utilities.EncryptionMode.XOR;
+                            encryptionMode = Crypto.EncryptionMode.XOR;
                         }
-                        ModeUpload(filepath, encryptionMode);
+                        Console.WriteLine("Enter .nzbl save path:");
+                        string savepath = Console.ReadLine();
+                        ModeUpload(filepath, encryptionMode, savepath);
                         break;
 
                     case "4":

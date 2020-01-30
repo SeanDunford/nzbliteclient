@@ -25,7 +25,7 @@ namespace Settings
         public string Tag;
         public string Category;
         public string Lang; //2Letters language
-        public Utilities.EncryptionMode EncryptionMode = Utilities.EncryptionMode.NONE;
+        public Crypto.EncryptionMode EncryptionMode = Crypto.EncryptionMode.NONE;
 
         public FileNamingRuleEnum GetFileNamingRule()
         {

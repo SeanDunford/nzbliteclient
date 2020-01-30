@@ -107,7 +107,7 @@ NzbLiteClient automatically generates parity files. You could edit this paramete
 You could define multiple folders to scan. Then each file matching filtering rules will be uploaded to Usenet:
 
 * Path: folder path
-* Encrypted: enable / disable fast file encryption
+* EncryptionMode: 0 for No Encryption, 1 for Fast XOR Algorythm
 * FileNamingRule: defines file name. Possible value: PARENTNAME, FILENAME or FULLPATH
 * Tag: a custom tag information
 * Category: file category.For SyncAuto only these value are valid: Movies, TvShows, Animes
@@ -235,6 +235,11 @@ I recommand you to use a newsgroup provider in another backbone for posting (cf.
 ![Usenet Tree](https://github.com/jhdscript/nzbliteclient/blob/master/usenet-tree.png)
 
 ## Changelog
+
+### Version 1.3.0.0 - 20200129
+
+* Fix issue in parity files upload
+* Upload Command generates a .nzbl file
 
 ### Version 1.2.0.0 - 20200129
 

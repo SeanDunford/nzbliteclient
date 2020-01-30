@@ -126,7 +126,7 @@ namespace FileWorkers
                 perfTotal.Start();
 
                 Guid usenetId = Guid.NewGuid();
-                byte[] encKey = FileXorifier.GenerateXorKey(usenetId);
+                byte[] encKey = Crypto.GenerateEncryptionKey(usenetId, dbf.EncryptionMode);
                 string usenetIdStr = usenetId.ToString();
                 string posterEmail = Pokemon.GetEmail();
                 string tempFilePath = Path.Combine(workingDir.FullName, usenetIdStr);
@@ -165,7 +165,7 @@ namespace FileWorkers
                     }
                     dicoOfSizePerExtension[extension] = fileToUpload.Length;
                     int nbChunks = (int)Math.Ceiling((double)fileToUpload.Length / Utilities.ARTICLE_SIZE);
-                    BinaryReader br = new BinaryReader(new FileStream(fi.FullName, FileMode.Open, FileAccess.Read, FileShare.Read, Utilities.BUFFER_SIZE));
+                    BinaryReader br = new BinaryReader(new FileStream(fileToUpload.FullName, FileMode.Open, FileAccess.Read, FileShare.Read, Utilities.BUFFER_SIZE));
                     listOfBrs.Add(br);
                     dicoOfChunksPerExtension[extension] = new List<UsenetChunk>(nbChunks);
                     for (int i = 0; i < nbChunks; i++)
@@ -224,7 +224,7 @@ namespace FileWorkers
                 }
 
                 perfTotal.Stop();
-                Logger.Info(LOGNAME, "[" + dbf.Id + "] " + (uploadSuccess == true ? "Success" : "Fail") + " (chunks: " + percSuccess + "% - files: " + listOfFilesToUpload.Length + " - size: " + Utilities.ConvertSizeToHumanReadable(totalSize) + " - par: " + (long)(perfPar.ElapsedMilliseconds / 1000) + "s - up: " + (long)(perfUpload.ElapsedMilliseconds / 1000) + "s - speed: " + Utilities.ConvertSizeToHumanReadable(totalSize / (perfUpload.ElapsedMilliseconds / 1000)) + "b/s)");
+                Logger.Info(LOGNAME, "[" + dbf.Id + "] " + (uploadSuccess == true ? "Success" : "Fail") + " (chunks: " + percSuccess + "% - files: " + listOfFilesToUpload.Length + " - size: " + Utilities.ConvertSizeToHumanReadable(totalSize) + " - par: " + (long)(perfPar.ElapsedMilliseconds / 1000) + "s - up: " + (long)(perfUpload.ElapsedMilliseconds / 1000) + "s - speed: " + Utilities.ConvertSizeToHumanReadable(totalSize / ((perfUpload.ElapsedMilliseconds < 1000 ? 1000 : perfUpload.ElapsedMilliseconds) / 1000)) + "b/s)");
                 return uploadSuccess;
             }
             catch (Exception ex)
@@ -234,11 +234,12 @@ namespace FileWorkers
             return false;
         }
 
-        public static void UploadSingleFile(FileInfo fi, Utilities.EncryptionMode encryptionMode)
+        public static DbFile UploadSingleFile(FileInfo fi, Crypto.EncryptionMode encryptionMode)
         {
+            DbFile dbf = null;
             try
             {
-                DbFile dbf = new DbFile();
+                dbf = new DbFile();
                 dbf.Id = fi.FullName;
                 dbf.DateLastWriteTime = fi.LastWriteTimeUtc;
                 dbf.Name = fi.Name;
@@ -260,6 +261,7 @@ namespace FileWorkers
             {
                 Logger.Error(LOGNAME, ex.Message, ex);
             }
+            return dbf;
         }
         #endregion
     }

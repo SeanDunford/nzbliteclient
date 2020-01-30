@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -75,6 +76,19 @@ namespace Usenet
                             for (byte passNumber = 0; passNumber < UsenetServer.MAX_PASS; passNumber++)
                             {
                                 chunk.SetId(passNumber);
+
+                                //DEBUG ONLY START
+                                //string chunkPath = Path.Combine(Utilities.ExecutableFolder, "chunks");
+                                //if (Directory.Exists(chunkPath) == false)
+                                //{
+                                //    Directory.CreateDirectory(chunkPath);
+                                //}
+                                //chunkPath = Path.Combine(chunkPath, chunk.ChunkExt + "_" + chunk.ChunkNumber + "_" + chunk.Id);
+                                //File.WriteAllBytes(chunkPath, chunk.Data);
+                                //isUploaded = true;
+                                //break;
+                                //DEBUG ONLY END
+
                                 isUploaded = us.Upload(chunk, _poster);
                                 if (isUploaded == true)
                                 {

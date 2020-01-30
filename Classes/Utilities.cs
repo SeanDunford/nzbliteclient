@@ -17,6 +17,7 @@ namespace Classes
         private const string LOGNAME = "[UTILITIES]";
         public const int ARTICLE_SIZE = 700 * 1024;
         public const int BUFFER_SIZE = 32 * 1024 * 1024;
+        public const string EXT_NZBL = ".nzbl";
         public const string EXT_RAW = ".raw";
         public const string EXT_BACKUP = ".backup";
         public const string USERAGENT = "NzbLiteClient";
@@ -30,14 +31,14 @@ namespace Classes
         public static string FolderDownload = Path.Combine(ExecutableFolder, "download");
         public static string FileDb = Path.Combine(ExecutableFolder, "database.db");
         public static string FileSettings = Path.Combine(ExecutableFolder, "config.json");
-        #endregion
+#endregion
 
-        #region Static Properties
+#region Static Properties
         public static Encoding UTF8 = Encoding.UTF8;
         public static Random Rnd = new Random(Environment.TickCount);
-        #endregion
+#endregion
 
-        #region Converters
+#region Converters
         /// <summary>
         /// Convert a byte size in human readable format
         /// </summary>
@@ -62,9 +63,9 @@ namespace Classes
             return ret;
 
         }
-        #endregion
+#endregion
 
-        #region Dirs And Files
+#region Dirs And Files
         /// <summary>
         /// Ensure all directories exist
         /// </summary>
@@ -162,27 +163,9 @@ namespace Classes
 
             return true;
         }
-        #endregion
+#endregion
 
-        #region Encryption
-        public enum EncryptionMode
-        {
-            NONE = 0,
-            XOR = 1
-        }
-        public static string GenerateHash(string rawData)
-        {
-            // Create a SHA256   
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                // ComputeHash - returns byte array  
-                byte[] b = sha256Hash.ComputeHash(UTF8.GetBytes(rawData));
-                return BytesToHex(b);
-            }
-        }
-        #endregion
-
-        #region Hex <-> Bytes
+#region Hex <-> Bytes
         /// <summary>
         /// Convert byte array to hex string
         /// </summary>
@@ -215,9 +198,9 @@ namespace Classes
             return b;
         }
 
-        #endregion
+#endregion
 
-        #region UnixTime
+#region UnixTime
         public static uint UnixTimestampFromDate(DateTime d)
         {
             return (uint)d.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
@@ -226,9 +209,9 @@ namespace Classes
         {
             return new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(secs);
         }
-        #endregion
+#endregion
 
-        #region Helpers
+#region Helpers
         public static bool IsWindowsPlatform()
         {
             return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
@@ -256,6 +239,6 @@ namespace Classes
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
-        #endregion
+#endregion
     }
 }
