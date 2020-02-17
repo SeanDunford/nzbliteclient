@@ -66,10 +66,7 @@ These settings apply for upload file:
 These settings are required to synchronise your uploads and to automate download using NzbLite.com Indexer:
 
 * ApiKey: your apikey to synchronize your NzbLite links and to automate downloads using our powerfull Indexer
-* ApiSyncAuto: to enable / disable auto synchronisation to NzbLite.com Indexer
-* ApiSyncUrl: url for synchronisation
-
-ApiSyncAuto and ApiSyncUrl are only used by our Uploaders Team. It requires a special access permission, so contact us if you want to join our Uploaders Team.
+* ApiSyncAuto: to enable / disable auto synchronisation to NzbLite.com
 
 ### NewsGroup Settings
 
@@ -143,7 +140,7 @@ This mode allows you to download a single file using its NzbLite link.
 
 ### Sync files to NzbLite.com
 
-This mode could be used only if you are a member of our Uploader Team. All file uploaded and not yet synced are sent to NzbLite.com Indexer.
+All file uploaded will be synced to NzbLite.com.
 
 ### Convert Link to Nzb
 
@@ -164,7 +161,7 @@ Available command line args:
 -r: Restore
 -u path: Upload a file
 -d NzbLiteLink [outputDir]: Download a file using its NzbLite link
--s: Synchronize uploaded files to NzbLite Indexer (Uploader Team restricted)
+-s: Synchronize uploaded files to NzbLite Indexer
 -c NzbLiteLink [outputDir]: convert a NzbLite link into a Nzb file
 ```
 
@@ -235,6 +232,11 @@ I recommand you to use a newsgroup provider in another backbone for posting (cf.
 ![Usenet Tree](https://github.com/jhdscript/nzbliteclient/blob/master/usenet-tree.png)
 
 ## Changelog
+
+### Version 1.4.0.0 - 20200214
+
+* Sync Mode added and opened for all users
+* Fix few issues
 
 ### Version 1.3.0.0 - 20200129
 

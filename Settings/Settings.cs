@@ -9,12 +9,15 @@ namespace Settings
 {
     public class Settings
     {
+        #region Constants
         private const string LOGNAME = "[SETTINGS]";
+        public const string ApiSyncUrl = "https://www.nzblite.com/api_sync.php";
+        #endregion
+
         public static Settings Current;
 
         #region Sync
         public string ApiKey;
-        public string ApiSyncUrl;
         public bool ApiSyncAuto;
         #endregion
 

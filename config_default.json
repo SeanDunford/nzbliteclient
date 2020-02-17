@@ -7,7 +7,6 @@
 
     "ApiKey": null,
     "ApiSyncAuto": false,
-    "ApiSyncUrl": null,
 
     "UsenetUsername": "user",
     "UsenetPassword": "pass",

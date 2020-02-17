@@ -17,7 +17,7 @@ namespace Sync
             try
             {
                 string apiKey = Settings.Settings.Current.ApiKey;
-                string apiUrl = Settings.Settings.Current.ApiSyncUrl;
+                string apiUrl = Settings.Settings.ApiSyncUrl;
                 if (string.IsNullOrEmpty(apiKey))
                 {
                     Logger.Warn(LOGNAME, "Cannot sync because apiKey is missing");

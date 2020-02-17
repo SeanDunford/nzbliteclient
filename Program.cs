@@ -119,7 +119,6 @@ namespace NzbLiteClient
                         break;
                 }
             }
-            string k = "";
         }
 
         private static bool Init()
